@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Basketball Team Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>🏀 CourtSide</h1>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#players">Players</a>
+            <a href="#register">Register Player</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="dashboard" class="welcome">
+            <h2>Basketball Team Management</h2>
+            <p>Manage your players, track statistics and build a stronger team.</p>
+        </section>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total Players</h3>
+                <p id="totalPlayers">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Points</h3>
+                <p id="totalPoints">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Assists</h3>
+                <p id="totalAssists">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Rebounds</h3>
+                <p id="totalRebounds">0</p>
+            </div>
+
+        </section>
+
+        <section id="register" class="panel">
+
+            <h2>Register New Player</h2>
+
+            <form id="playerForm">
+
+                <label for="name">Player Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter player name"
+                    required
+                >
+
+                <label for="jersey">Jersey Number</label>
+                <input
+                    type="number"
+                    id="jersey"
+                    min="0"
+                    max="99"
+                    placeholder="Enter jersey number"
+                    required
+                >
+
+                <label for="position">Playing Position</label>
+
+                <select id="position" required>
+                    <option value="">Select position</option>
+                    <option value="PG">Point Guard (PG)</option>
+                    <option value="SG">Shooting Guard (SG)</option>
+                    <option value="SF">Small Forward (SF)</option>
+                    <option value="PF">Power Forward (PF)</option>
+                    <option value="C">Center (C)</option>
+                </select>
+
+                <button type="submit">Add Player</button>
+
+            </form>
+
+            <p id="message" role="status"></p>
+
+        </section>
+
+        <section id="players" class="panel">
+
+            <h2>Team Roster</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Jersey</th>
+                            <th>Position</th>
+                            <th>Points</th>
+                            <th>Assists</th>
+                            <th>Rebounds</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="playerTable">
+                        <!-- Player records appear here -->
+                    </tbody>
+                </table>
+
+            </div>
+
+            <p id="emptyMessage">No players registered yet.</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CourtSide Basketball Manager</p>
+        <p>Built with HTML, CSS and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
